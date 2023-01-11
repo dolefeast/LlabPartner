@@ -36,20 +36,21 @@ bao_fft = util_tools.fft_bao(k, mPk)    #To check the difference between
 bao_fft_small = util_tools.fft_bao(k_small, mPk_small)
 
 
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=[12.,9.], dpi=100)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=[16.,9.], dpi=100)
 #ax1.set_xlabel(names[0])
 #ax1.set_ylabel(names[1])
 ax1.set_title('Only BAOs')
 ax2.set_xlabel('Mpc/h')
-ax2.set_title(r'$\int_0^\infty dk k^2 \frac{\sin(kr)}{kr}$')
+ax2.set_title(r'$\int_0^\infty dk k^2 P(k) \frac{\sin(kr)}{kr}$')
 #ax2.set_xscale('log')
 #ax2.set_yscale('log')
 
-[ax1.plot(x, y, '--k', linewidth=0.855555, alpha=0.9) for x, y in zip(X, Y)]
-ax1.plot(k_small, only_bao, label='Only BAOs')
-ax1.legend(loc='best')
+ax1.plot(k_small, only_bao, color='steelblue', alpha=0.9)
+[ax1.plot(x, y, '--k', linewidth=0.7, alpha=0.7) for x, y in zip(X, Y)]
+#ax1.plot(X, Y, '--k', linewidth=0.8, alpha=0.9)
+#ax1.legend(loc='best')
 ax2.plot(*bao_fft, label='Fourier transform')
-ax2.plot(*bao_fft_small, label='Fourier transform small')
+ax2.set_xlim((0, 300))
 ax2.legend(loc='best')
 
 fig.savefig('./fig/mpk.pdf')

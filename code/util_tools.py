@@ -130,17 +130,19 @@ def fft_bao(k_in, pk_in):
     r_units = k_in[-1]-k_in[0]
     Xi = []
     for r in R: 
-        Xi.append(sp.integrate.trapz(k_in * pk_in**2 * np.sin(k_in*r)/r, k_in))
-    return R/r_units, np.array(Xi)
+        Xi.append(sp.integrate.trapz(k_in * pk_in * np.sin(k_in*r)/r, k_in))
+    return R, np.array(Xi)
 
 def gaussian(x, amplitude, mean, stddev):
     return amplitude * np.exp(-((x-mean)/4/stddev)**2)
 
-def peaks_fit(k_in, pk_in, function=gaussian):
+def peaks_fit(k_in, pk_in, function=gaussian, n_points=150):
     """
     Parameters:
         k_in: array
         pk_in: array
+        function: the function to be fit to 
+        n_points: the points in every split
     Returns:
         gauss_split: np.array that splits the pk_in into 
                      the peaks and fits them to gaussian
@@ -153,28 +155,41 @@ def peaks_fit(k_in, pk_in, function=gaussian):
 
     ksplits = np.split(k_in, index) #splits the data with every minima
     pksplits = np.split(pk_in, index)
-    #return ksplits, pksplits
     kfit = []
     pkfit = []
     for kdata, data in zip(ksplits, pksplits):
         if len(data) <= 15: #The data split is too short
             #pkfit.append(data) #Append the data without doing anything
             continue
+        amputation = np.where(np.logical_and(data>=data[0], data>=data[-1]))
+        theo_kdata = np.linspace(kdata[0], kdata[-1], n_points) 
+        kdata = kdata[amputation]
+        data = data[amputation]
         #Estimation of the optimal parameters
         stddev0 = (kdata[0] - kdata[-1])/2
         amplitude0 = max(data)
         mean0 = (kdata[0] + kdata[-1])/2
 
         data_shift = data - min(data) #Need to shift the data to fit it 
-        optimal, _ = sp.optimize.curve_fit(function, kdata, 
-                data_shift, p0=[amplitude0, mean0, stddev0], maxfev=100000)
-        theo_data = function(kdata, *optimal) + min(data)
-        kfit.append(kdata)
+        try:
+            optimal, _ = sp.optimize.curve_fit(function, kdata, 
+                    data_shift, maxfev=100000)
+        except TypeError:
+            print('Data array too short!')
+            continue
+        except RuntimeError:
+            print('Divergence!')
+            continue
+        theo_data = function(theo_kdata, *optimal) + min(data)
+        #kfit = np.concatenate((kfit, theo_kdata))
+        #pkfit = np.concatenate((pkfit, theo_kdata))
+        kfit.append(theo_kdata)
         pkfit.append(theo_data)
 
     print('Fit done!\n')
 
     return kfit, pkfit
+    return np.concatenate(kfit), np.concatenate(pkfit)
 
 files = list(Path('../class_public/output').glob('*.dat'))
 
