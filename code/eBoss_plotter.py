@@ -23,13 +23,13 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 9))
 
 for data, params in zip(df_list_santi, param_list_santi):
     kk, P0, P2 = data[1], data[2], data[3] 
-    ax1.plot(kk, kk*P0, label=params+' santi')
-    ax2.plot(kk, kk*P2, label=params+' santi')
+    ax1.plot(kk, kk*P0, label=str(params)+' santi')
+    ax2.plot(kk, kk*P2, label=str(params)+' santi')
 
 for data, params in zip(df_list, param_list):
     kk, P0, P2 = data[1], data[2], data[3] 
-    ax1.plot(kk, kk*P0, '--', linewidth=0.8, label=params+' hector')
-    ax2.plot(kk, kk*P2, '--', linewidth=0.8, label=params+' hector')
+    ax1.plot(kk, kk*P0, '--', linewidth=0.8, label=str(params)+' hector')
+    ax2.plot(kk, kk*P2, '--', linewidth=0.8, label=str(params)+' hector')
 
 ax1.set_title('$k*P_0(k)$'), ax2.set_title('$k*P_2(k)$')
 ax1.legend(loc='best'), ax2.legend(loc='best')
