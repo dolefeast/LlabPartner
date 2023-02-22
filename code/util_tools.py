@@ -55,7 +55,7 @@ def open_file(file_name):
     df = pd.read_csv(file_name, names=None, sep='\s+', header=None, comment='#')
     return df
 
-def many_files(files, open=None):
+def many_files(files, openfiles=None):
     """Parameters:
         files: A list of file names to chose the files from
     Returns: 
@@ -64,14 +64,23 @@ def many_files(files, open=None):
         
     Stops asking for files when inserting a blank space"""
     assert len(list(files)) != 0
-    print(len(list(files)))
-    for i, file_name in enumerate(files, start=1):
-        print(f' [{i}]: \t {file_name}')
     df_list = []
     param_list = []
+    if openfiles != None:
+        for file_name in files:
+                p = re.compile('Om[0-9]*_OL[0-9]*')
+                parameters = p.findall(str(file_name))
+                print(f'\tOpening {parameters[0]}...')
+                df_list.append(open_file(file_name))
+                param_list.append(get_params(parameters[0]))
+
+        return df_list, param_list
+
+    for i, file_name in enumerate(files, start=1):
+        print(f' [{i}]: \t {file_name}')
     print('The exception handling is weak. Handle with care!')
     file_index = input('Choose the files to open("all" to add all files): ')
-    while file_index != 'all' or open==None:
+    while file_index != 'all':
         print(file_index != 'all')
         try:
             file_index = int(file_index)
@@ -93,17 +102,6 @@ def many_files(files, open=None):
 #            print(f'The index {file_index} is too big!')
 #            continue
         file_index = input('Choose next file to open: ')
-    df_list = []
-    param_list = []
-    for file_name in files:
-            p = re.compile('Om[0-9]*_OL[0-9]*')
-            parameters = p.findall(str(file_name))
-            print(f'\tOpening {parameters[0]}...')
-            df_list.append(open_file(file_name)[0])
-            param_list.append(get_params(parameters[0]))
-    print('Showing results...')
-        
-    return df_list, param_list
 
 def get_params(param_name):
     """
@@ -120,7 +118,7 @@ def get_params(param_name):
             OmOL.append(int(i)/100)
         except ValueError:
             continue
-    OmOL.append(1 - sum(OmOL))
+    OmOL.append(round(1 - sum(OmOL), 2))
     return OmOL 
 
 def weighted_avg_and_std(values, weights):
