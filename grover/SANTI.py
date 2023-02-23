@@ -2,6 +2,7 @@
 # coding: utf-8
 
 
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import random, csv
@@ -88,16 +89,28 @@ def multi_trial_durr_hoyer(shots,trials,database,threshold):
 	return freq
 
 def main1(shots,trials,bits):
-	threshold = 9
-	database = get_database(bits)
+    threshold = 9
+    database = get_database(bits)
 
-	freq = multi_trial_durr_hoyer(shots,trials,database,threshold)
-	x = np.array([i for i in range(2**bits)])
-	y,errors = [],[]
-	for freq_list in freq:
-		y.append(np.mean(freq_list))
-		errors.append(np.std(freq_list))
+    freq = multi_trial_durr_hoyer(shots,trials,database,threshold)
+    x = np.array([i for i in range(2**bits)])
+    y,errors = [],[]
+    for freq_list in freq:
+        y.append(np.mean(freq_list))
+        errors.append(np.std(freq_list))
 
+    #true_target_pos = 636
+    #true_target_pos = 0
+    #fail_rate=100-y[true_target_pos]
+    #fail_rate_error=errors[true_target_pos]
+    #print("Fail rate: ({} +/- {})%".format(fail_rate,fail_rate_error))
+    y = np.array(y)
+    errors = np.array(errors)
+    df = pd.DataFrame([x.T, y.T, errors.T]).T
+    df.to_csv(f'./output/{shots}shots_{trials}trials_{bits}bits.csv', sep=',', index=False)
+
+
+def plot_err(x, y, errors):
 	plt.errorbar(x, y, yerr=errors, fmt="o", ecolor='gray', elinewidth=0.75, capsize=3)
 	plt.xlabel("Database Register")
 	plt.ylabel("Frequency")
@@ -109,10 +122,6 @@ def main1(shots,trials,bits):
 		"""Frequency plot of the Durr-Hoyer Algorithm for {} shots
 when applied to the ESI database to find the most habitable planet""".format(shots)
 		)
-	true_target_pos = 636
-	fail_rate=100-y[true_target_pos]
-	fail_rate_error=errors[true_target_pos]
-	print("Fail rate: ({} +/- {})%".format(fail_rate,fail_rate_error))
 	plt.show()
 
 def main2(shots,trials,bits):
@@ -138,18 +147,39 @@ for {} trials of {} shots for different termination thresholds with {} qubits"""
 		)
 	plt.show()
     
+print('Started first round!')
 print(main1(shots=100,trials=1,bits=10))
+print('Done!\n')
+print('Started second round!')
 print(main1(shots=100,trials=1,bits=2))
+print('Done!\n')
+print('Started third round!')
 print(main1(shots=300,trials=1,bits=10))
+print('Done!\n')
+print('Started fourth round!')
 print(main1(shots=100,trials=1,bits=3))
+print('Done!\n')
+print('Started fifth round!')
 print(main1(shots=100,trials=1,bits=5))
+print('Done!\n')
+print('Started sixth round!')
 print(main1(shots=700,trials=1,bits=10))
+print('Done!\n')
+print('Started seventh round!')
 print(main1(shots=50,trials=1,bits=10))
+print('Done!\n')
+print('Started eigth round!')
 print(main1(shots=10,trials=1,bits=10))
+print('Done!\n')
+print('Started nineth round!')
 print(main1(shots=100,trials=2,bits=10))
+print('Done!\n')
+print('Started tenth round!')
 print(main1(shots=100,trials=3,bits=10))
+print('Done!\n')
+print('Started eleventh round!')
 print(main1(shots=100,trials=4,bits=10))
-
+print('Done!\n')
 
 
 
