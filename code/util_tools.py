@@ -84,13 +84,12 @@ def many_files(files, openfiles=None):
         print(file_index != 'all')
         try:
             file_index = int(file_index)
+            file_name = files[file_index-1]
+            df_list.append(open_file(file_name))
             p = re.compile('Om[0-9]*_OL[0-9]*')
             parameters = p.findall(str(file_name))
             if len(parameters) == 0:
                 parameters = '_'
-            print(f'\tOpening {parameters[0]}...')
-            file_name = files[file_index-1]
-            df_list.append(open_file(file_name))
             param_list.append(get_params(parameters[0]))
         except ValueError:
             print('Opened [Om, OL]:', param_list)
@@ -136,7 +135,8 @@ def remove_bao(k_in, pk_in):
     # De-wiggling routine by Mario Ballardini
 
     # This k range has to contain the BAO features:
-    k_ref=[2.8e-2, 4.5e-1]
+    #k_ref=[2.8e-2, 4.5e-1]
+    k_ref = [0.001, 4.5e-1]
 
     # Get interpolating function for input P(k) in log-log space:
     _interp_pk = sp.interpolate.interp1d( np.log(k_in), np.log(pk_in),
@@ -144,7 +144,7 @@ def remove_bao(k_in, pk_in):
     interp_pk = lambda x: np.exp(_interp_pk(np.log(x)))
 
     # Spline all (log-log) points outside k_ref range:
-    idxs = np.where(np.logical_or(k_in <= k_ref[0], k_in >= k_ref[1]))
+    idxs = np.where(np.logical_or(k_in <= k_ref[0], k_in >= k_ref[1]))[0]
     _pk_smooth = sp.interpolate.UnivariateSpline( np.log(k_in[idxs]),
                                                      np.log(pk_in[idxs]), k=3, s=0 )
     pk_smooth = lambda x: np.exp(_pk_smooth(np.log(x)))
@@ -162,7 +162,7 @@ def remove_bao(k_in, pk_in):
     wtrend = sp.interpolate.UnivariateSpline(wzeros, fwiggle(wzeros), k=3, s=0)
 
     # Construct smooth no-BAO:
-    idxs = np.where(np.logical_and(k_in > k_ref[0], k_in < k_ref[1]))
+    idxs = np.where(np.logical_and(k_in > k_ref[0], k_in < k_ref[1]))[0]
     pk_nobao = pk_smooth(k_in)
     pk_nobao[idxs] *= wtrend(k_in[idxs])
 
