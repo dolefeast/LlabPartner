@@ -9,9 +9,9 @@ from pathlib import Path
     #Given a directory full of Psmooth, return Olins and P_nobao.
 
 #files = Path('/home/santi/TFG/outputs_santi/class_output/').glob('*pk.dat')
-files = list(Path('/home/santi/TFG/outputs_santi/class_outputs').glob('Olin*'))
-hector_files = list(Path('/home/santi/TFG/lrg_eboss/model/Olinkirkby_eboss_comb_z070_matterpower_15.txt').glob('Olin*'))
-df, params = util_tools.many_files(files, openfiles='all')      #all pk smooth as outputs from class
+files = list(Path('/home/santi/TFG/outputs_santi/class_outputs').glob('*pk.dat'))
+#hector_files = list(Path('/home/santi/TFG/lrg_eboss/model/Olinkirkby_eboss_comb_z070_matterpower_15.txt').glob('Olin*'))
+df, params = util_tools.many_files(files)      #all pk smooth as outputs from class
 
 print('Creating Olin data files...')
 for data, omega in zip(df, params):

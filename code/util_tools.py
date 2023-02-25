@@ -63,14 +63,19 @@ def many_files(files, openfiles=None):
         parameters: a list of the curvature parameters of each file
         
     Stops asking for files when inserting a blank space"""
-    assert len(list(files)) != 0
+    n_files = len(list(files))
+    assert n_files != 0
     df_list = []
     param_list = []
-    if openfiles != None:
+    if openfiles != None or n_files==1:
         for file_name in files:
                 p = re.compile('Om[0-9]*_OL[0-9]*')
                 parameters = p.findall(str(file_name))
-                print(f'\tOpening {parameters[0]}...')
+                if len(parameters) == 0:
+                    parameters = '_'
+                    print(f'\tOpening {str(file_name)}...')
+                else: 
+                    print(f'\tOpening {parameters[0]}...')
                 df_list.append(open_file(file_name))
                 param_list.append(get_params(parameters[0]))
 
