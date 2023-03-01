@@ -149,8 +149,7 @@ def remove_bao(k_in, pk_in):
     # De-wiggling routine by Mario Ballardini
 
     # This k range has to contain the BAO features:
-    #k_ref=[2.8e-2, 4.5e-1]
-    k_ref = [0.001, 4.5e-1]
+    k_ref=[2.8e-2, 4.5e-1]
 
     # Get interpolating function for input P(k) in log-log space:
     _interp_pk = sp.interpolate.interp1d( np.log(k_in), np.log(pk_in),
