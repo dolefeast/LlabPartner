@@ -64,7 +64,10 @@ def many_files(files, openfiles=None):
         
     Stops asking for files when inserting a blank space"""
     n_files = len(list(files))
-    assert n_files != 0
+    if n_files == 0:
+        print('There are no files in this dir!')
+        raise UnboundLocalError
+
     df_list = []
     param_list = []
     if openfiles != None or n_files==1:
@@ -72,21 +75,22 @@ def many_files(files, openfiles=None):
                 p = re.compile('Om[0-9]*_OL[0-9]*')
                 parameters = p.findall(str(file_name))
                 if len(parameters) == 0:
-                    parameters = '_'
-                    print(f'\tOpening {str(file_name)}...')
+                    parameters = str(file_name)
+                    print(f'\tOpening {parameters}...')
+                    param_list.append(parameters)
                 else: 
                     print(f'\tOpening {parameters[0]}...')
+                    param_list.append(get_params(parameters[0]))
                 df_list.append(open_file(file_name))
-                param_list.append(get_params(parameters[0]))
 
-        return df_list, param_list
+        return [df_list, param_list]
+        print('Skipped the return')
 
     for i, file_name in enumerate(files, start=1):
         print(f' [{i}]: \t {file_name}')
     print('The exception handling is weak. Handle with care!')
     file_index = input('Choose the files to open("all" to add all files): ')
     while file_index != 'all':
-        print(file_index != 'all')
         try:
             file_index = int(file_index)
             file_name = files[file_index-1]
@@ -94,7 +98,7 @@ def many_files(files, openfiles=None):
             p = re.compile('Om[0-9]*_OL[0-9]*')
             parameters = p.findall(str(file_name))
             if len(parameters) == 0:
-                parameters = '_'
+                parameters = str(file_name)
             param_list.append(get_params(parameters[0]))
         except ValueError:
             print('Opened [Om, OL]:', param_list)
@@ -102,10 +106,15 @@ def many_files(files, openfiles=None):
         except UnboundLocalError:
             print(f'El archivo {parameters} está vacío')
             continue
-#        except IndexError:
-#            print(f'The index {file_index} is too big!')
-#            continue
+        except IndexError:
+            print(f'The index {file_index} is too big!')
+            file_index = input('Choose next file to open: ')
+            continue
         file_index = input('Choose next file to open: ')
+    else:
+        print('Got to the recursive break')
+        return many_files(files, openfiles='all')
+        print('But not here')
 
 def get_params(param_name):
     """
