@@ -1,7 +1,3 @@
-# Matter power spectrum P(k) at redshift z=0.7
-# for k=0.000210963 to 1.05003 h/Mpc,
-# number of wavenumbers equal to 606
-#    1:k (h/Mpc)              2:P (Mpc/h)^3        
        2.109631387639e-04       1.739033493095e+02 
        2.280268860546e-04       2.213165491843e+02 
        2.457733548273e-04       2.703075002775e+02 

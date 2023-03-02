@@ -1,14 +1,3 @@
-# dimensionless total lensed [l(l+1)/2pi] C_l's
-# for l=2 to 2500, i.e. number of multipoles equal to 2499
-#
-# -> if you prefer output in CAMB/HealPix/LensPix units/order, set 'format' to 'camb' in input file
-# -> if you don't want to see such a header, set 'headers' to 'no' in input file
-# -> for CMB lensing (phi), these are C_l^phi-phi for the lensing potential.
-#    Remember the conversion factors:
-#    C_l^dd (deflection) = l(l+1) C_l^phi-phi
-#    C_l^gg (shear/convergence) = 1/4 (l(l+1))^2 C_l^phi-phi
-#
-# 1:l     2:TT                     3:EE                     4:TE                     5:BB                     6:phiphi                 7:TPhi                   8:Ephi               
     2       1.269765001408e-10       4.510534675962e-15       1.776230036275e-13       1.218722504526e-19       6.073528727390e-09       5.057870850926e-10      -1.464166279702e-12 
     3       1.263116526093e-10       8.544719511926e-15       3.075596454721e-13       2.438257874559e-19       3.741383940644e-09       3.540834140981e-10      -1.369199671372e-12 
     4       1.219699302050e-10       1.056749696937e-14       3.682920925715e-13       4.065551661899e-19       2.593379108369e-09       2.695172285337e-10      -1.112974676916e-12 
