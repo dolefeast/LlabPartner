@@ -77,10 +77,7 @@ def many_files(files, openfiles=None):
                 if len(parameters) == 0:
                     parameters = str(file_name)
                     print(f'\tOpening {parameters}...')
-                    param_list.append(parameters)
-                else: 
-                    print(f'\tOpening {parameters[0]}...')
-                    param_list.append(get_params(parameters[0]))
+                param_list.append(get_params(parameters[0]))
                 df_list.append(open_file(file_name))
 
         return [df_list, param_list]

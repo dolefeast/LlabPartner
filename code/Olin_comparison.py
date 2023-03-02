@@ -29,14 +29,14 @@ for data, param in zip(df, params):
     y = pk_in#util_tools.remove_bao(k_in, pk_in)
     plt.plot(data[0],y, label=param)
 
-k, pk_in = hector_df[0][0], hector_df[0][1]
-plt.plot(k, pk_in, '--k')
+k_in, pk_in = hector_df[0][0], hector_df[0][1]
+plt.plot(k_in, pk_in, '--k')
 plt.legend(loc='best')
 plt.show()
 
 if len(df)==1:
     fig, ax = plt.subplots()
-    x1, y1 = k, pk_in
+    x1, y1 = k_in, pk_in
     x2, y2 = data[0], data[1]
     ymod=np.interp(x2, x1, y1)
     #ymod = ymod(x2)
