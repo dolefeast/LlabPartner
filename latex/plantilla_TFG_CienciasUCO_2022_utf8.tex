@@ -1,0 +1,114 @@
+% ----------------------------------------------- 
+%  Plantilla LaTeX para el Trabajo Fin de Grado
+%         Facultad de Ciencias
+%        Universidad de Córdoba
+%             Codificación utf8
+%------------------------------------------------
+%              Abril 2022
+%------------------------------------------------
+\documentclass[12pt,a4paper]{report}
+
+% Fichero de estilo proporcionado
+\input{estilo_TFG_CienciasUCO_2022_utf8.sty}
+
+%%%% Nuevas definiciones %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Ejemplos de algunas definiciones 
+\def\dint{\displaystyle \int}
+\def \gt {\gamma(t)}        %  gamma(t)
+\def \st {\tilde{\sigma}}   %  sigma tilde
+\def \sg {\sigma_{\gamma}}  %  sigma sub gamma
+\def \omt {\omega(t)}       %  omega(t)
+\def \bu {\mathbf{u}}       %  u negrilla
+\def \R {\mathbb{R}}        %  números reales
+
+
+%--------------------------------------------------------------------------------------
+% CAMBIAR LOS DATOS EN CADA CASO 
+
+\newcommand{\titulacion}{Grado de Física}                  % Grado de Biología
+                                                      % Grado de Bioquímica
+                                                      % Grado de Ciencias Ambientales
+                                                      % Grado de Física
+                                                      % Grado de Química
+                                                      
+\newcommand{\titulo}{Oscilaciones Bariónicas Acústicas en Universos con Curvatura} % Título
+\newcommand{\codigo}{FS22-17-FSC}      % Código
+\newcommand{\tipo}{Trabajo teórico-práctico general}             % Trabajo teórico--práctico general
+                                          		     % Trabajo de iniciación a la investigación
+                                                      % Trabajo en empresa
+                                                      % Idea de negocio
+                                                      % Propuesta científico--técnica
+                                                      % Trabajo docente
+                                          
+\newcommand{\autor}{Santiago Sanz Wuhl}     % Autor
+\newcommand{\fecha}{Fecha de entrega}                 % Fecha de entrega
+%--------------------------------------------------------------------------------------
+\newcommand{\nomfig}{Figura}                         
+\newcommand{\nomfigs}{figuras} 
+
+% Si se quiere que las figuras se denominen ilustraciones comentar las dos órdenes
+% anteriores y descomentar las dos que siguen 
+
+%\newcommand{\nomfig}{Ilustración}                         
+%\newcommand{\nomfigs}{ilustraciones}   
+
+
+%--------------------------------------------------------------------------------------
+
+% Empieza el documento
+\begin{document}
+
+% No cambiar  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{portada}   % Dejar esta línea (incluirá el fichero 		 
+%                                  portada.tex
+% 	                              proporcionado, que no hay que modificar
+% Fin de No cambiar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\include{agradecimientos} % Agradecimientos y/o dedicatoria si procede (si no comentar esta línea)
+
+% No cambiar  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{indices}  % Dejar esta línea (incluirá el fichero 		 
+%                                  indices.tex
+% 	                              proporcionado, que no hay que modificar
+% Fin de No cambiar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\include{resumen}          % Resumen (insertar en el fichero resumen.tex proporcionado,
+%                                     el resumen en español e inglés)
+
+% empiezan los capítulos
+\include{capitulo1}       % Añadir los diferentes capítulos con el mismo formato que tiene
+%                           el fichero capitulo1.tex)
+%\include{capitulo2} 
+% .......
+
+\include{conclusion}       % Conclusiones (insertar en el fichero conclusion.tex proporcionado,
+%                                          las conclusiones en español e inglés)
+ 
+\include{bibliografia}     % Bibliografía (insertar en el fichero bibliografia.tex proporcionado, 
+%                                          la bibliografia con bibitem)
+
+%----------------------------------------------------------
+% Si se tiene una base de datos bibliográfica
+% estilo de bibliografía: plana, alfa...
+%\bibliographystyle{plain}
+
+% Bibliografía---------------------------
+% Añade la bibliografía al índice
+%\addcontentsline{toc}{chapter}{Bibliografía}
+
+%se incluye la bibliografía. Archivo de tipo .bib (bibtex)
+%\bibliography{bibliografia}
+%----------------------------------------------------------
+
+% Apéndices (si los hubiera)
+\appendix
+\include{anexo1}    % Añadir los diferentes anexos, si los hubiera, con el mismo formato que tiene
+%                     el fichero anexo1.tex)
+\include{anexo2}
+% .......
+
+% Termina el documento
+\end{document}

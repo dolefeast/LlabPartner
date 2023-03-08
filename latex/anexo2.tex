@@ -1,0 +1,79 @@
+\chapter*{Anexo: Ejemplo para introducir código ISE}
+
+\addcontentsline{toc}{chapter}{Anexo: Ejemplo para introducir código ISE}
+
+\lstdefinelanguage{ISE} {morekeywords={library,use,entity,is,port,in,out,end,
+               architecture,of,is,signal,begin,process,then,
+               port,downto,if,and,then,else
+               },                
+sensitive=false,
+emph={STD_LOGIC_1164,
+STD_LOGIC_ARITH,
+STD_LOGIC_UNSIGNED,
+IEEE,
+ALL,
+STD_LOGIC,
+STD_LOGIC_VECTOR}, 
+emphstyle=\color{magenta},
+morecomment=[l]{--},
+basicstyle=\small \ttfamily,
+   keywordstyle=\color{blue},
+   commentstyle=\color{webgreen},
+   stringstyle=\color{webtinto},
+   numbers=left,
+   numberstyle=\tiny\color{gray},
+   stepnumber=1,
+   numbersep=10pt,
+   backgroundcolor=\color{white},
+   tabsize=4,
+   showspaces=false,
+   showstringspaces=false,
+%
+   frame=LtbR,
+     framerule=0.5pt,
+     aboveskip=0.5cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+%     framexleftmargin=1cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{gray96},
+     rulesepcolor=\color{black}
+     }
+
+
+\renewcommand{\baselinestretch}{1}
+ \begin{lstlisting}[language=ISE]
+library IEEE;
+             use IEEE.STD_LOGIC_1164.ALL;
+             use IEEE.STD_LOGIC_ARITH.ALL;
+             use IEEE.STD_LOGIC_UNSIGNED.ALL;
+-- Uncomment the following library declaration if 
+-- instantiating  any Xilinx primitive in this code.
+-- library UNISIM;
+-- use UNISIM.VComponents.all;
+     
+entity counter is
+	Port ( CLOCK : in  STD_LOGIC;
+   	DIRECTION :    in  STD_LOGIC;
+  	COUNT_OUT :    out STD_LOGIC_VECTOR (3 downto 0));
+end counter;
+
+architecture Behavioral of counter is
+signal count_int : std_logic_vector(3 downto 0) := "0000"; 
+begin
+process (CLOCK)
+begin
+	if CLOCK='1' and CLOCK'event then
+		if DIRECTION='1' then
+			count_int <= count_int + 1;
+		else
+			count_int <= count_int - 1;
+		end if;
+	end if;
+end process;
+COUNT_OUT <= count_int;
+end Behavioral;
+\end{lstlisting}
+\renewcommand{\baselinestretch}{1.5}
+

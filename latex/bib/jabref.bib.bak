@@ -1,0 +1,25 @@
+% Encoding: UTF-8
+
+@Article{Eisenstein2004,
+  author  = {Daniel J. Eisenstein, Idit Zehavi y otros},
+  title   = {Detection of the Baryon Acoustic Peak in the Large Scale correlation function of SDSS Luminous Red Galaxies},
+  journal = {The Astrophysical Journal},
+  year    = {2004},
+}
+
+@Article{Eisenstein2006,
+  author        = {Daniel J. Eisenstein and Hee-jong Seo and Edwin Sirko and David Spergel},
+  title         = {Improving Cosmological Distance Measurements by Reconstruction of the Baryon Acoustic Peak},
+  __markedentry = {[santi:6]},
+  abstract      = {The baryon acoustic oscillations are a promising route to the precision measure of the cosmological distance scale and hence the measurement of the time evolution of dark energy. We show that the non-linear degradation of the acoustic signature in the correlations of low-redshift galaxies is a correctable process. By suitable reconstruction of the linear density field, one can sharpen the acoustic peak in the correlation function or, equivalently, restore the higher harmonics of the oscillations in the power spectrum. With this, one can achieve better measurements of the acoustic scale for a given survey volume. Reconstruction is particularly effective at low redshift, where the non-linearities are worse but where the dark energy density is highest. At z=0.3, we find that one can reduce the sample variance error bar on the acoustic scale by at least a factor of 2 and in principle by nearly a factor of 4. We discuss the significant implications our results have for the design of galaxy surveys aimed at measuring the distance scale through the acoustic peak.},
+  date          = {2006-04-17},
+  doi           = {10.1086/518712},
+  eprint        = {astro-ph/0604362v1},
+  eprintclass   = {astro-ph},
+  eprinttype    = {arXiv},
+  file          = {online:http\://arxiv.org/pdf/astro-ph/0604362v1:PDF},
+  journaltitle  = {Astrophys.J.664:675-679,2007},
+  keywords      = {astro-ph},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

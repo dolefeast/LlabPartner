@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Este es el fichero 'estilo_TFG_CienciasUCO_2022.sty'
+%%    con el estilo LaTeX para escribir los
+%%          TRABAJOS FIN DE GRADO
+%%                 de la 
+%%          Facultad de Ciencias 
+%%         Universidad de Córdoba
+%               Abril 2022
+%    
+%           CODIFICAIÓN utf-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Idioma castellano 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+%\usepackage{mathpazo} 
+%\usepackage{eulervm}
+
+
+% Tamaño de la página
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
+
+% Para redefinir algunas cosas del babel en castellano 
+\accentedoperators    % Pone acentos a los operadores
+\decimalpoint         % Usa el punto como separador decimal
+                    
+
+% Paquetes auxiliares  (incluir aquellos que se necesiten)
+
+\usepackage[usenames,dvipsnames]{xcolor} % Para usar colores
+\usepackage{tikz}                        % Para dibujar
+\usepackage[strict]{changepage}          % Para redefinir márgenes en mitad del documento
+
+% Para matemáticas
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Para gráficos
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+%
+\usepackage{appendix}   % Contiene mandatos adicionales para apéndices
+\usepackage{titlesec}   % Para redefinir capítulos, secciones,...
+\usepackage{longtable}  % Para tablas grandes
+
+
+% Para las cabeceras y pies (luego se redefine cuando haga falta)
+\usepackage{fancyhdr}   % Para las cabeceras
+\pagestyle{fancy} 
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%Para el fondo de la portada
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight,%
+keepaspectratio]{fondo_portada.png}%
+\vfill
+}}}
+
+% Estilo de capítulo, secciones...
+
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\titleformat{\chapter}[display]
+  { \sffamily\bfseries\Large\color{blue}}
+  {\filleft\MakeUppercase{\chaptertitlename}\ \Huge\sffamily{\arabic{chapter}}\ 
+  }  
+  {4ex}
+  {\titlerule
+   \vspace{2ex}%
+   \filright}
+  [\vspace{2ex}\hrule\vspace{2pt}%
+   \titlerule]
+   
+   \titleformat{\section}[hang]
+{\large \scshape\bfseries}
+{\color{blue}  \thesection .}
+{1ex}{\color{blue}}[\quad]
+{}
+
+  \titleformat{\subsection}[runin]
+{ \scshape\bfseries}
+{\color{blue}  \thesubsection .}
+{1ex}{\color{blue}}[\quad]
+{}
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para los códigos 
+\usepackage{listings}
+
+% Para código Matlab
+\lstset{language=Matlab,
+  keywords={break,case,catch,continue,else,elseif,end,for,function,
+      global,if,otherwise,persistent,return,switch,try,while,diary,
+      clear,clc,who,whos,help,helpwin,linspace,length,ans,doc,floor,
+      ceil,max,min,sum,prod,sort,round,sign,fix,mean,exp,sin,cos,tan,
+      input,fprint,load,save,disp,fopen,fclose,inline,function,feval,
+      global,return,poly,polyval,roots,solve,fzero, poly2sym,hold,plot,
+      polyfit,ppval,spline,interp1,quad,quadl,quadgk,inv,\,lu,cond,spdisgs,
+      magic,ode*,ode45,ode23,flops,rref,pinv,chol,zeros,ones,rand,sparse,
+      tic,toc,diag,eye,speye,espones,spy,syms,diff,dsolve,simplify,ezplot},
+   basicstyle=\small \ttfamily,
+   keywordstyle=\color{blue},
+   commentstyle=\color{webgreen},
+   stringstyle=\color{webtinto},
+   numbers=left,
+   numberstyle=\tiny\color{gray},
+   stepnumber=1,
+   numbersep=10pt,
+   backgroundcolor=\color{white},
+   tabsize=4,
+   showspaces=false,
+   showstringspaces=false,
+%
+   frame=LtbR,
+     framerule=0.5pt,
+     aboveskip=0.5cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+%     framexleftmargin=1cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{gray96},
+     rulesepcolor=\color{black}}
+     
+     
+ % Para código ISE
+     
+\lstdefinelanguage{ISE} {morekeywords={library,use,entity,is,port,in,out,end,
+               architecture,of,is,signal,begin,process,then,
+               port,downto,if,and,then,else
+               },                
+sensitive=false,
+emph={STD_LOGIC_1164,
+STD_LOGIC_ARITH,
+STD_LOGIC_UNSIGNED,
+IEEE,
+ALL,
+STD_LOGIC,
+STD_LOGIC_VECTOR}, 
+emphstyle=\color{magenta},
+morecomment=[l]{--},
+basicstyle=\small \ttfamily,
+   keywordstyle=\color{blue},
+   commentstyle=\color{webgreen},
+   stringstyle=\color{webtinto},
+   numbers=left,
+   numberstyle=\tiny\color{gray},
+   stepnumber=1,
+   numbersep=10pt,
+   backgroundcolor=\color{white},
+   tabsize=4,
+   showspaces=false,
+   showstringspaces=false,
+%
+   frame=LtbR,
+     framerule=0.5pt,
+     aboveskip=0.5cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+%     framexleftmargin=1cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{gray96},
+     rulesepcolor=\color{black}
+     }
+     
+%para generar índice con hipervínculos
+\usepackage{hyperref} 
+
+
+
+\hypersetup{
+    colorlinks,
+    citecolor=webgreen,
+    filecolor=black,
+    linkcolor=webblue,
+    urlcolor=webtinto,
+}
+
+
+% Colores definidos
+\definecolor{azul}{rgb}{65,105,225}
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webgray}{rgb}{.753,.753,.753}
+\definecolor{webblue}{rgb}{0,0,.8}
+\definecolor{webtinto}{rgb}{0.73,0.00,0.00}
+\definecolor{gray96}{gray}{.96}
+
+% Algunas redefiniciones 
+%\renewcommand{\contentsname}{Índice general}
+%\renewcommand{\partname}{Parte}
+%\renewcommand{\appendixname}{Apéndice}
+%\renewcommand{\figurename}{Figura}
+%\renewcommand{\listfigurename}{Índice de figuras}
+%\renewcommand{\chaptername}{Capítulo}
+%\renewcommand{\bibname}{Bibliografía}
+
+

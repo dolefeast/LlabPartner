@@ -1,0 +1,38 @@
+% INDICES-----------------------------------
+
+% Genera el índice de contenidos------------
+
+\fancypagestyle{plain}{
+\fancyfoot[R]{\small pág. \thepage} 
+}
+\tableofcontents
+\addcontentsline{toc}{chapter}{Índice general}
+
+\renewcommand{\baselinestretch}{1.5}
+
+% Genera el índice de figuras---------------
+\fancypagestyle{plain}{
+\fancyfoot[R]{\small pág. \thepage} 
+}
+\renewcommand{\listfigurename}{Índice de \nomfigs}
+\renewcommand{\figurename}{\nomfig}
+
+\listoffigures
+\addcontentsline{toc}{chapter}{Índice de \nomfigs}
+
+
+% Genera el índice de tablas---------------
+\fancypagestyle{plain}{
+\fancyfoot[R]{\small pág. \thepage}
+}
+\listoftables
+\addcontentsline{toc}{chapter}{Índice de tablas}
+
+
+% Para las cabeceras del resto
+
+\pagestyle{fancy} 
+\fancyhf{}
+\fancyfoot[R]{\small pág. \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
