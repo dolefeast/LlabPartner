@@ -64,15 +64,17 @@ def many_files(files, openfiles=None):
         
     Stops asking for files when inserting a blank space"""
     n_files = len(list(files))
-    if n_files == 0:
-        print('There are no files in this dir!')
-        raise UnboundLocalError
+    try:
+        assert n_files > 0
+    except AssertionError:
+        print('There are no files in that directory!')
+        raise AssertionError
 
     df_list = []
     param_list = []
     if openfiles != None or n_files==1:
         for file_name in files:
-                p = re.compile('Om[0-9]*_OL[0-9]*')
+                p = re.compile('Om[0-9]*_O[mL][0-9]*')
                 parameters = p.findall(str(file_name))
                 if len(parameters) == 0:
                     parameters = str(file_name)

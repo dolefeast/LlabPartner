@@ -1,4 +1,5 @@
 import matplotlib as mpl
+from pathlib import Path
 import util_tools
 import matplotlib.pyplot as plt
 import numpy as np
@@ -12,14 +13,14 @@ rs = 147.784
 def grouped_weighted_avg(values, weights, by):
     return (values * weights).groupby(by).sum() / weights.groupby(by).sum()
 
-files = util_tools.mcmc_output
-df, params = util_tools.many_files(files)
+files = Path('~/TFG/outputs_santi/class_Om031_OL069/logfiles/').glob('*')
 #calculate_observables(*params[0])
 Ok_list = []
 alpha_para_list = []
 alpha_perp_list = []
 
 for frame, omegas in zip(df, params):
+    
     Ok = omegas[-1]
     alpha_para, alpha_para_std = util_tools.weighted_avg_and_std(frame[2], frame[0])
     alpha_perp, alpha_perp_std = util_tools.weighted_avg_and_std(frame[3], frame[0])

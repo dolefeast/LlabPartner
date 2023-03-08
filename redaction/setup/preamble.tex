@@ -1,0 +1,423 @@
+\documentclass[12pt,twoside,a4paper,openright]{book}
+
+
+% --------------------begin--------------------
+% Support to break the citation into multiple lines and underline expressions
+\usepackage{breakcites}
+\usepackage[normalem]{ulem}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for calculating the values for formats
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage{float}
+\usepackage{calc}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Declaring the margin inside each page
+\usepackage[
+    inner=4.0cm,% left margin on an odd page
+    outer=2.5cm,% right margin on an odd page
+    bottom=2.5cm,
+    top=2.5cm,
+    footskip=1.0cm, % the margin for footnote
+    heightrounded=false,
+    % showframe % show the margins of each page
+    ]{geometry}
+\usepackage{titling}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Change the headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} %delete everything
+\renewcommand{\headrulewidth}{0pt} %remove the horizontal line in the header
+\fancyfoot[C]{\thepage} %page number on all pages on right side 
+\fancypagestyle{plain}{%
+    \fancyfoot[C]{\thepage}%
+}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Setting the hyperref linking, e.g., citations, http links, figure/table numbers
+% Using the "full" version to help understanding the link destinations
+% \usepackage[
+%     breaklinks,
+%     pdfpagelabels=true,
+%     plainpages=false,
+%     pdfauthor={{Yu WAN}},
+%     pdftitle={{The Semantics-Based Approaches for Automatic Translation Evaluation}}
+%     pdfsubject={{Ph.D. Thesis}},
+%     bookmarksnumbered=true,
+%     colorlinks=false,
+%     citecolor=blue,
+%     filecolor=blue,
+%     linkcolor=black,
+%     urlcolor=black,
+%     pdfstartview=FitH
+% ]{hyperref}
+
+% Or using the "clean" version for submission and printing
+\usepackage[
+    hidelinks,
+    breaklinks,
+    pdfauthor={{Yu WAN}},
+    pdftitle={{The Semantics-Based Approaches for Automatic Translation Evaluation}},
+    pdfsubject={{Ph.D. Thesis}},
+]{hyperref}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for the font of the entire thesis
+\usepackage{tgtermes}
+\usepackage{adjustbox}
+
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+% better suport for the url breaking
+\makeatletter
+    \g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{standalone}
+
+\usepackage{graphics}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for figure presentation with pgfplots and tikzpicture
+\usepackage{pgfmath}
+\usepackage{pgffor}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.3}
+\usepgfplotslibrary{fillbetween}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, decorations.text, shapes.geometric, positioning, decorations.pathreplacing, calligraphy, patterns}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for better mathmatical format
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[framed,amsmath,thmmarks]{ntheorem}
+\usepackage{dsfont}
+\usepackage{mathtools}
+\usepackage{pifont}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for table presentation
+\usepackage{multirow}
+\usepackage{arydshln}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ifthen}
+\usepackage{tabularx}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for Chinese encoding
+\usepackage{CJK}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for other features related to figures and tables
+\usepackage{rotating}
+\usepackage{caption}
+\captionsetup{%
+  font=footnotesize,% set font size to footnotesize
+  labelfont=bf, % bold label (e.g., Figure 3.2) font
+  list-entry=heading % comment this line to use the short caption in list of tables and figures
+}
+\usepackage{subcaption}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Managing the sideway tables and figures
+\newcommand\myrotatingangle{90}
+\newcounter{mynumpagehelper}
+
+\makeatletter
+    \newcommand\printthepagenum{The current page number is: \thepage, and the buffered page number is: \themynumpagehelper.\\}
+\makeatother
+
+\newcommand{\settableodd}[1]{
+    \ifnum \themynumpagehelper>\thepage
+        \setcounter{mynumpagehelper}{\themynumpagehelper+1}
+    \else
+        \setcounter{mynumpagehelper}{\thepage+1}
+    \fi
+    
+    \ifodd \themynumpagehelper
+        \renewcommand\myrotatingangle{90}
+    \else
+        \renewcommand\myrotatingangle{270}
+    \fi
+    
+    \input{#1}
+
+    % \printthepagenum
+}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for Definitions
+\ifdefined\beginthm\else
+    \newtheorem{definition}{Definition}
+\fi
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Support for Algorithms
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Commands for controlling the format of Table of Contents
+\usepackage{tocloft}
+
+\cftsetpnumwidth{3.55em}
+\cftsetrmarg{3.55em}
+\renewcommand{\cftdotsep}{5.0}
+
+% \makeatletter
+%     \renewcommand{\@tocrmarg}{3.0em}
+%     \setlength{\cftfignumwidth}{3.0em}
+% \makeatother
+
+\newlength{\mylen}
+% format for Part declaration
+\renewcommand{\cftpartpresnum}{Part~}
+\settowidth{\mylen}{\cftpartpresnum\cftpartaftersnum} % extra space
+\addtolength{\cftpartnumwidth}{\mylen} % add the extra space
+
+% format for Chapter declaration
+\renewcommand{\cftchappresnum}{Chapter~}
+\settowidth{\mylen}{\cftchappresnum\cftchapaftersnum} % extra space
+\addtolength{\cftchapnumwidth}{\mylen} % add the extra space
+
+% Remove the space between chapters in list of tables/figures
+\makeatletter
+    \renewcommand*\chapter{\clearpage
+        \thispagestyle{plain}%
+        \global\@topnum\z@
+        \@afterindentfalse
+        \secdef\@chapter\@schapter}
+    \def\@chapter[#1]#2{
+        \ifnum \c@secnumdepth >\m@ne
+            \if@mainmatter
+                \refstepcounter{chapter}%
+                \typeout{\@chapapp\space\thechapter.}%
+                \addcontentsline{toc}{chapter}%
+                       {\protect\numberline{\thechapter}#1}%
+            \else
+                \addcontentsline{toc}{chapter}{#1}%
+            \fi
+        \else
+            \addcontentsline{toc}{chapter}{#1}%
+        \fi
+        \chaptermark{#1}%
+        % \addtocontents{lof}{\protect\addvspace{10\p@}}% <-- Gap in LoF
+        % \addtocontents{lot}{\protect\addvspace{10\p@}}% <-- Gap in LoT
+        \if@twocolumn
+            \@topnewpage[\@makechapterhead{#2}]%
+        \else
+            \@makechapterhead{#2}%
+            \@afterheading
+        \fi}
+\makeatother
+
+\setlength{\cftbeforetoctitleskip}{-1.5em}
+\renewcommand{\cfttoctitlefont}{\normalfont\normalsize\bfseries}
+\setlength{\cftaftertoctitleskip}{3.5em}
+
+\renewcommand{\cftlottitlefont}{\normalfont\normalsize\bfseries}
+
+\renewcommand{\cftfigpresnum}{Figure~}
+\renewcommand{\cftfigaftersnum}{:}
+\setlength{\cftfignumwidth}{5.5em}
+\setlength{\cftfigindent}{0em}
+
+\renewcommand{\cfttabpresnum}{Table~}
+\renewcommand{\cfttabaftersnum}{:}
+\setlength{\cfttabnumwidth}{5.5em}
+\setlength{\cfttabindent}{0em}
+
+\setlength{\cftbeforepartskip}{0em}
+\setlength{\cftbeforechapskip}{0em}
+\setlength{\cftbeforesecskip}{0em}
+
+\setlength{\cftpartindent}{0em}
+\setlength{\cftsecindent}{0em}
+\setlength{\cftsubsecindent}{2.5em}
+
+\setlength{\cftbeforepartskip}{0em}
+\setlength{\cftbeforechapskip}{0em}
+\setlength{\cftbeforesecskip}{0em}
+\setlength{\cftbeforesubsecskip}{0em}
+
+\renewcommand{\cftpartfont}{\normalsize\bfseries}
+\renewcommand{\cftpartpagefont}{\normalsize\bfseries}
+\renewcommand{\cftchapfont}{\normalsize\bfseries}
+\renewcommand{\cftchappagefont}{\normalsize\bfseries}
+\renewcommand{\cftsecfont}{\normalsize}
+\renewcommand{\cftsecpagefont}{\normalsize}
+\renewcommand{\cftsubsecfont}{\normalsize}
+\renewcommand{\cftsubsecpagefont}{\normalsize}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Delaring the numeric level in main content
+% -1 for Part only
+% 0 for Part and Chapter
+% 1 for Part, Chapter, and Section
+% 2 for Part, Chapter, Section and Subsection
+% 3 for Part, Chapter, Section, Subsection, and Subsubsection
+% etc.
+\setcounter{secnumdepth}{2}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Declaring the linespacing (margin between lines) in content
+\usepackage[doublespacing]{setspace}
+\flushbottom
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Always use an indent at the beginning of each paragraph
+% Increasing the skip space between paragraphs
+% \usepackage[skip=12pt, indent=2em]{parskip}
+\usepackage[skip=6pt, indent=2em]{parskip}
+% \usepackage[skip=12pt plus2pt, indent=2em]{parskip}
+% \usepackage[skip=12pt plus4pt, indent=2em]{parskip}
+% \usepackage[skip=10pt plus8pt, indent=2em]{parskip}
+% \usepackage[skip=8pt plus12pt, indent=2em]{parskip}
+% \usepackage[skip=6pt plus16pt, indent=2em]{parskip}
+% \usepackage[skip=0pt plus28pt, indent=2em]{parskip}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Declaring the format of part, chapter, section, subsection, ...
+\usepackage{titlesec}
+
+\renewcommand{\bottomtitlespace}{30pt}
+
+\titleformat{\part}[display]{\vspace*{8.5cm}\normalfont\normalsize\bfseries\filcenter}{Part~\thepart\\}{20pt}{}{}
+\titlespacing{\part}{0pt}{0pt}{0pt}
+
+\titleformat{\chapter}[block]{\normalfont\normalsize\bfseries}{\chaptertitlename~\thechapter\\}{0pt}{}{}
+% \titlespacing{\chapter}{0pt}{0pt plus 5pt}{20pt plus 5pt}
+\titlespacing{\chapter}{0pt}{-36pt}{20pt}
+
+\titleformat*{\section}{\normalfont\normalsize\bfseries}
+% \titlespacing{\section}{0pt}{10pt plus 5pt minus 5pt}{10pt plus 5pt minus 5pt}
+% \titlespacing{\section}{0pt}{10pt plus 5pt}{10pt plus 5pt}
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+\titleformat*{\subsection}{\normalfont\normalsize\bfseries}
+% \titlespacing{\subsection}{0pt}{8pt plus 4pt minus 4pt}{8pt plus 4pt minus 4pt}
+% \titlespacing{\subsection}{0pt}{8pt plus 4pt}{8pt plus 4pt}
+\titlespacing{\subsection}{0pt}{8pt}{8pt}
+
+\titleformat*{\subsubsection}{\normalfont\normalsize\bfseries}
+% \titlespacing{\subsubsection}{0pt}{8pt plus 4pt minus 4pt}{8pt plus 4pt minus 4pt}
+% \titlespacing{\subsubsection}{0pt}{8pt plus 4pt}{8pt plus 4pt}
+\titlespacing{\subsubsection}{0pt}{8pt}{8pt}
+
+\titleformat*{\paragraph}{\normalfont\normalsize\bfseries}
+% \titlespacing{\paragraph}{0pt}{8pt plus 4pt minus 4pt}{8pt plus 4pt minus 4pt}
+% \titlespacing{\paragraph}{0pt}{8pt plus 4pt}{8pt plus 4pt}
+\titlespacing{\paragraph}{0pt}{8pt}{8pt}
+
+% Automatically filling the page with space vertically, avoiding the space in the bottom of page
+% \setlength\baselineskip{\fill}
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Clear empty pages between chapters
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+    \clearpage
+    {\pagestyle{empty}\origdoublepage}%
+}
+\let\cleardoublepage\clearemptydoublepage
+% --------------------end--------------------
+
+% --------------------begin--------------------
+% Declaring the bibliography style
+\usepackage{natbib}
+\renewcommand{\bibname}{\centerline{References}}
+\renewcommand\cite{\citep}
+\newcommand\newcite{\citet}
+
+% The following format works for ACL
+% \usepackage{etoolbox}
+% \newcounter{bibcount}
+% \makeatletter
+%     \patchcmd{\@lbibitem}{\item[}{\item[\hfil\stepcounter{bibcount}{[\thebibcount]}}{}{}
+%     \setlength{\bibhang}{1.25\parindent}
+%     \renewcommand\NAT@bibsetup%
+%        [1]{\setlength{\leftmargin}{\bibhang}\setlength{\itemindent}{-\parindent}%
+%            \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}}
+% \makeatother
+% \bibliographystyle{acl_natbib}
+
+% The following format works for APA style
+\bibliographystyle{apalike}
+
+% --------------------end--------------------
+
+
+% --------------------begin--------------------
+% Disable the newline command for most cases
+\pdfstringdefDisableCommands{
+    \def\\{}
+}
+% --------------------end--------------------
+
+
+% \makeatletter
+% \newcommand\thefontsize[1]{{#1 The current font size is: \f@size pt\par}}
+% \makeatother
+
+% \thefontsize\tiny
+% \thefontsize\scriptsize
+% \thefontsize\footnotesize
+% \thefontsize\small
+% \thefontsize\normalsize
+% \thefontsize\large
+% \thefontsize\Large
+% \thefontsize\LARGE
+% \thefontsize\huge
+% \thefontsize\Huge

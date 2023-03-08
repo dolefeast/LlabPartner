@@ -1,0 +1,85 @@
+\chapter{Introduction}
+\label{chapter1}
+\section{Background}
+\label{chapter1.Background}
+
+This latex template mainly serves for the MS.c. and Ph.D. student at University of Macau (UM).
+
+This template is reorganized by Yu WAN, a Ph.D. student at NLP$^2$CT lab, University of Macau.
+
+
+\section{Format of Theses}
+
+The format of thesis at UM follows the instruction file provided by Graduated School (GRS) at UM.\footnote{ \href{https://grs.um.edu.mo/wp-content/uploads/Guidelines-Governing-the-Format-of-PhD-Theses-Final.pdf}{\url{https://grs.um.edu.mo/wp-content/uploads/Guidelines-Governing-the-Format-of-PhD-Theses-Final.pdf}}}
+
+\subsection{Default Format}
+The font type thoughout the thesis should be ``Times New Roman'' for English.
+The font size should be 12-point (12pt) for almost all cases (including the titles and contents), except the materials aside from main contents (\textit{e.g.}, figures, tables, and footnotes).
+The line spacing is double-line spacing for almost all cases except footnotes, bibliographic entries, etc.
+The font style should be bolded for most of the titles.
+
+\subsection{Cover, Front, and Colophon Pages}
+The materials in cover, font and colophon pages should be centered.
+
+The colophon page should not be revised, and should be single-side when printing.
+The beginning of those two paragraphs should not have indents (as the command ``\texttt{noindent}'' used in the \texttt{colophon.tex} file).
+
+The page number should not be presented on those pages.
+
+Also, be patient to revise the related lines in those pages, \textit{e.g.}, your thesis title, your affiliation, etc.
+Those contents are marked with the square brackets, and you should modify them \textcolor{red}{based on your own experiences}, \textit{e.g.}, {[YEAR]} $\rightarrow$ 2023.
+
+\subsection{Acknowledgement, Abstract, and Declaration Pages}
+The titles of those pages should be centered following the default format.
+
+Except for the Declaration part, the indent should be introduced at the beginning of each paragraph.
+
+The Declaration page should be single-side when printing, \textit{i.e.}, the page number should be an odd integer, and an empty page should be strictly followed.
+
+\subsection{Table of Contents}
+The Table of Contents includes the titles and their corresponding page numbers following the default format.
+
+\subsection{List of Tables and Figures}
+\label{lotf}
+This collects the tables and figures presented in this thesis.
+
+\subsection{Main Text}
+
+The main text contains the several levels of contents.
+
+\subsubsection{Commands}
+The commands for managing your manuscript is shown in Table~\ref{table.chapter1.command}.
+You should manage your structure of your thesis depending on your own research.
+\input{sections/Chapter1_Introduction/tab.main_text.command}
+
+\subsubsection{Figures and Tables}
+You can introduce your figure as in Figure~\ref{fig.chapter1.example_figure}.
+Also, all the captions of your figures and tables will be collected into the List of Tables and Figures.
+\input{sections/Chapter1_Introduction/fig.main_text.example_figure}
+
+If you want to show the short version of your citation in the List of Tables and Figures, comment the following line in the file ``\texttt{preamble.tex}'':
+{\texttt{list-entry=heading}}.
+
+Making sure that you have written the short version in your ``{\textbackslash\texttt{caption}}'' command like ``\textbackslash\texttt{caption}{[short caption]}{\{long caption\}}''.
+
+\subsubsection{Footnotes}
+Use the command ``\textbackslash\texttt{footnote}'' to manage your footnotes.
+
+\subsubsection{Citation and Reference}
+Use the command ``\textbackslash\texttt{cite}'' and ``\textbackslash\texttt{newcite}'' to manage your citations.
+For example:
+
+\begin{itemize}
+    \item \newcite{vaswani2017attention} presented the \textsc{Transformer} model in the year 2017.
+    \item \textsc{Transformer} model \cite{vaswani2017attention} was introduced in the year 2017.
+\end{itemize}
+
+The Reference list is shown in the end of thesis following APA format.
+
+\section{Last Comments}
+The first part of your thesis should include the following two sections: \uline{Potential Contributions and Statement of Originally}.
+
+Try to receive advices from the stuff in your faculty and revise the format.
+
+If you have any questions, please contact Yu WAN via \texttt{yb87459@um.edu.mo}.
+

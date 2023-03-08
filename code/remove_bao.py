@@ -30,12 +30,12 @@ for data, omega in zip(df, params):
     pk_nobao = util_tools.remove_bao(k, pk)
     psm_lin = np.interp(k_lin, k, pk_nobao)
     psm_df = pd.DataFrame([k_lin.T, psm_lin.T]).T
-    pklin_df.to_csv(f'/home/santi/TFG/outputs_santi/linspace_class/pklin_{tag}', sep='\t', index=False, header=None)
+    psm_df.to_csv(f'/home/santi/TFG/outputs_santi/linspace_class/psmlin_{tag}', sep='\t', index=False, header=None)
 
     print(f'\tPrinting to Olin_{tag}...')
     olin = util_tools.calculate_olin(k, pk)
     olin = np.interp(k_lin, k, olin)
     olin_df = pd.DataFrame([k_lin.T, olin.T]).T
-    pklin_df.to_csv(f'/home/santi/TFG/outputs_santi/linspace_class/Olin_{tag}', sep='\t', index=False, header=None)
+    olin_df.to_csv(f'/home/santi/TFG/outputs_santi/linspace_class/Olin_{tag}', sep='\t', index=False, header=None)
 
 print('Done!')

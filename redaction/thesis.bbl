@@ -1,0 +1,9 @@
+\begin{thebibliography}{}
+
+\bibitem[Vaswani et~al., 2017]{vaswani2017attention}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
+  Kaiser, {\L}., and Polosukhin, I. (2017).
+\newblock {Attention Is All You Need}.
+\newblock In {\em NIPS}.
+
+\end{thebibliography}

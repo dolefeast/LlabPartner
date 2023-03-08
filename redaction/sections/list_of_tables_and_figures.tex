@@ -1,0 +1,18 @@
+% the tolerance value for accepting the line breaking
+% larger value denotes line breaking is easier to be accepted
+\tolerance=1000
+\makeatletter
+    \renewcommand\listoftables{
+        \@starttoc{lot}
+    }
+    \def\ext@figure{lot}
+\makeatother
+\section*{\hfill \normalsize{List of Tables and Figures} \hfill}
+\addcontentsline{toc}{chapter}{List of Tables and Figures}
+
+{
+    \countdef\interlinepenalty1
+    \listoftables
+}
+
+\cleardoublepage

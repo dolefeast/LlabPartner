@@ -1,0 +1,58 @@
+%  A simple Tribhuvan University, Institute of Engineering, Masters Thesis proposal template
+%  2017-12-14 v. 1.0.0
+%  Copyright 2010-2017 by Shyam Krishna Khadka 
+% This template is inspired from Jesper Kjær Nielsen <jkn@es.aau.dk> AAU template which can be seen in some of the files.
+
+\input{setup/preamble.tex}% package inclusion and set up of the document
+\input{setup/macros.tex}% my new macros
+
+\begin{document}
+
+%frontmatter
+\pagestyle{plain} %disable headers and footers
+\input{sections/cover.tex}
+\cleardoublepage
+\input{sections/title.tex}
+\cleardoublepage
+\input{sections/colophon.tex}
+\cleardoublepage
+
+% use Roman page numbering in the frontmatter
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\input{sections/acknowledgement.tex}
+\cleardoublepage
+\input{sections/abstract.tex}
+\cleardoublepage
+\input{sections/declaration.tex}
+\cleardoublepage
+
+\input{sections/table_of_contents}
+\cleardoublepage
+\input{sections/list_of_tables_and_figures}
+\cleardoublepage
+
+
+% use arabic page numbering in the mainmatter
+\pagenumbering{arabic} 
+\setcounter{page}{1}
+
+\input{sections/main_text}
+\clearpage
+
+% \renewcommand{\bibsection}{\section*{\bibname}}
+\renewcommand{\bibsection}{\chapter*{\bibname}}
+\phantomsection
+\addcontentsline{toc}{chapter}{References}
+\bibliography{bib/mybib}
+
+% \bibliographystyle{acl_natbib}
+
+% \renewcommand{\bibname}{\centerline\bfseries{References}}
+% \bibliographystyle{apacite}
+% \bibliography{bib/mybib}
+
+
+
+\end{document}
