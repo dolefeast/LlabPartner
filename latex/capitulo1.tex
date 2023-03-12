@@ -3,22 +3,33 @@
 
 \section{Fundamento teórico}
 \subsection{Oscilaciones Bariónicas Acústicas}
-En los primeros cientos de miles de años del universo, éste existía en un estado hiper denso conocido como el plasma primordial, formado por (hasta lo que sabemos) materia oscura, bariones y fotones.
+En los primeros cientos de miles de años del universo, éste existía en un estado hiper denso conocido como plasma primordial, formado por (hasta lo que sabemos) materia oscura, bariones y fotones.
 Debido a la alta concentración de materia del universo temprano, había una fortísima atracción gravitatoria, contrarrestada por la presión de radiación debida al Efecto Thomson. 
 
-Estas fuerzas generaban colisiones entre las partículas del plasma primordial que se propagaban en forma de ondas esféricas, con un mecanismo casi idéntico al del sonido en el aire. 
+Las altísimas temperaturas del universo en la época anterior a la recombinación generaban fotones cuya presión de radiación generaba perturbaciones en el plasma que se propaga de forma isotrópica por el espacio.
+Estas ondas acústicas necesitan por supuesto un medio por el que viajar. Al expandirse el unverso disminuyendo así la concentración de materia, llegado cierto punto la distancia entre partículas será demasiado grande como para interactuar, prohibiendo así la expansión de las ondas acústicas y congelándolas en el tiempo.
+Se conoce el radio de estas ondas como la escala acústica o horizonte del sonido $r_{s}\approx 150Mpc$\cite[Eisenstein2004]. 
 
-Debido a la expansión del universo, pasado cierto tiempo la densidad del mismo no será lo suficientemente alta como para continuar permitiendo la propagación de estas ondas esféricas, congelándolas así en el tiempo. 
-Al ser estas ondas picos de densidad de materia, será en estas zonas donde haya la mayor probabilidad de formación de galaxias. 
+\subsection{Análisis BAO}
 
-Al conocer el tamaño 'comoving'\footnote{'Comoving' hace referencia a lo que mediríamos si el universo no se hubiese expandido} (aproximadamente 150Mpc)\cite[Eisenstein2004] de estas ondas esféricas congeladas en el tiempo, si conseguimos medir su tamaño actual 'físico' (es decir, considerando la expansión del universo') podremos usar esos resultados para tomar medidas más y más precisas de objetos muy distantes.
+El análisis de oscilaciones acústicas bariónicas (BAO, por sus siglas en inglés) permite, a través de estudios de gran volumen, analizar y medir $r_s$.
+Las oscilaciones BAO no son fáciles de ver a simple vista, pero sabiendo que las galaxias proliferan en esferas de radio $r_s$, se propone la función de correlación a dos puntos $X_i(r)$ que devuelve la distribución de distancias de galaxias. Esto es, dada una galaxia en un punto $\textbf{r}_i$ esta distará del resto de galaxias del universo en posiciones $\{\textbf{r}_j\} $ por una distancia $ \{\|\textbf{r}_i - \textbf{r}_j \|\} $. La densidad $X_i(r)$ recoge la estadística de las distancias a las que se suelen encontrar las galaxias.
+
+Se define $P(k)$ o \textit{galaxy power spectrum} como la transformada de Fourier de $X_i(r)$. Puesto que tenemos un patrón que se repite cada $r_s$, esta función presenta picos en $\frac{2\pi}{r_s}$. 
+
+Al conocer el tamaño \textit{comoving}\footnote{'\textit{Comoving}' hace referencia a lo que mediríamos si el universo no se hubiese expandido} de estas ondas esféricas congeladas en el tiempo, si conseguimos medir su tamaño actual 'físico' (es decir, considerando la expansión del universo) podremos usar esos resultados para tomar medidas más y más precisas de objetos muy distantes. 
+
+La expansión del universo afecta por igual a todas las distancias, incluida la longitud de onda de la luz. Por ello, observaremos una tendencia hacia el rojo de cualquier radiación que midamos, fenómeno conocido como \textit{redshift}. Al conocer el espectro electromagnético de emisión de una galaxia, podemos contrastar la longitud de onda que observamos con la que 'debería ser', es decir, la longitud de onda de emisión. 
+
+Definimos así el ya mencionado redshift $z$
+\begin{align}
+z = \frac{\lambda_{\text{observado}} - \lambda_{\text{emitido}}}{\lambda_{\text{emitido}}}
+\end{align}
+Que se podrá usar como una medida del tiempo que ha estado la onda viajando.
 
 \subsection{Efecto de la curvatura del universo}
 
-A día de hoy, todos los estudios BAO que se han realizado han asumido un universo sin curvatura. Esto es, aunque el universo presenta curvatura de manera local debido a las concentraciones de masa, el universo es plano de manera asintótica.
-
-
-
+A día de hoy, todos los estudios BAO que se han realizado han asumido un universo sin curvatura. Esto es, aunque el universo presenta curvatura de manera local debido a las concentraciones de masa, el universo es plano de manera asintótica. 
 
 
 \subsection{Estudio de las curvas BAO}
