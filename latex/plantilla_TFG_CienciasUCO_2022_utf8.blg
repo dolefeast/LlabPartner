@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: plantilla_TFG_CienciasUCO_2022_utf8.aux
+A level-1 auxiliary file: agradecimientos.aux
+A level-1 auxiliary file: resumen.aux
+A level-1 auxiliary file: capitulo1.aux
+A level-1 auxiliary file: resultados.aux
+A level-1 auxiliary file: conclusion.aux
+The style file: plain.bst
+A level-1 auxiliary file: anexo1.aux
+A level-1 auxiliary file: anexo2.aux
+Database file #1: bib/miaumiau.bib
+Warning--I didn't find a database entry for "."
+Warning--empty journal in Collaboration2018
+Warning--empty year in Collaboration2018
+Warning--empty journal in Eisenstein2005
+Warning--empty year in Eisenstein2005
+Warning--empty journal in Eisenstein1998
+Warning--empty year in Eisenstein1998
+Warning--empty journal in Eisenstein2006
+Warning--empty year in Eisenstein2006
+Warning--empty journal in Hogg1999
+Warning--empty year in Hogg1999
+You've used 7 entries,
+            2118 wiz_defined-function locations,
+            539 strings with 8795 characters,
+and the built_in function-call counts, 8812 in all, are:
+= -- 604
+> -- 1234
+< -- 0
++ -- 493
+- -- 486
+* -- 1032
+:= -- 1686
+add.period$ -- 16
+call.type$ -- 7
+change.case$ -- 263
+chr.to.int$ -- 0
+cite$ -- 17
+duplicate$ -- 73
+empty$ -- 130
+format.name$ -- 486
+if$ -- 1476
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 8
+newline$ -- 33
+num.names$ -- 14
+pop$ -- 286
+preamble$ -- 1
+purify$ -- 257
+quote$ -- 0
+skip$ -- 43
+stack$ -- 0
+substring$ -- 41
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 26
+warning$ -- 10
+while$ -- 15
+width$ -- 8
+write$ -- 58
+(There were 11 warnings)

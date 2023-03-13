@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.12.21)  12 MAR 2023 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.12.21)  13 MAR 2023 12:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,7 +555,7 @@ File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 ) (./plantilla_TFG_CienciasUCO_2022_utf8.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- (./agradecimientos.aux) (./resumen.aux) (./capitulo1.aux) (./resultados.aux) (./conclusion.aux) (./bibliografia.aux) (./anexo1.aux) (./anexo2.aux))
+ (./agradecimientos.aux) (./resumen.aux) (./capitulo1.aux) (./resultados.aux) (./conclusion.aux) (./anexo1.aux) (./anexo2.aux))
 \openout1 = `plantilla_TFG_CienciasUCO_2022_utf8.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -649,12 +649,12 @@ LaTeX Info: Redefining \nameref on input line 60.
 \openout4 = `plantilla_TFG_CienciasUCO_2022_utf8.out'.
 
  (./portada.tex
-<logo_ciencias.png, id=78, 157.5486pt x 157.5486pt>
+<logo_ciencias.png, id=95, 157.5486pt x 157.5486pt>
 File: logo_ciencias.png Graphic file (type png)
 <use logo_ciencias.png>
 Package pdftex.def Info: logo_ciencias.png  used on input line 23.
 (pdftex.def)             Requested size: 170.71652pt x 170.71729pt.
-<fondo_portada.png, id=80, 578.16pt x 831.105pt>
+<fondo_portada.png, id=97, 578.16pt x 831.105pt>
 File: fondo_portada.png Graphic file (type png)
 <use fondo_portada.png>
 Package pdftex.def Info: fondo_portada.png  used on input line 27.
@@ -724,46 +724,39 @@ LaTeX Info: Redefining \% on input line 1.
 
  (./capitulo1.tex
 Cap\'{\i }tulo 1.
-
-LaTeX Warning: Citation `.' on page 7 undefined on input line 11.
-
 [7
 
 
 
 
-]) [8]
+]
+
+LaTeX Warning: Citation `.' on page 8 undefined on input line 30.
+
+[8]) [9]
 \openout2 = `resultados.aux'.
 
  (./resultados.tex
 Cap\'{\i }tulo 2.
-<../figs/DA_DH_flat.pdf, id=169, 722.7pt x 505.89pt>
+<../figs/DA_DH_flat.pdf, id=195, 722.7pt x 505.89pt>
 File: ../figs/DA_DH_flat.pdf Graphic file (type pdf)
 <use ../figs/DA_DH_flat.pdf>
 Package pdftex.def Info: ../figs/DA_DH_flat.pdf  used on input line 7.
 (pdftex.def)             Requested size: 318.66948pt x 223.07088pt.
-) [9
+) [10
 
 
 
 
-] [10 <../figs/DA_DH_flat.pdf>]
+] [11 <../figs/DA_DH_flat.pdf>]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex [11
+ (./conclusion.tex [12
 
 
 
 
-]) [12
-
-]
-\openout2 = `bibliografia.aux'.
-
- (./bibliografia.tex) [13
-
-
-
+]) [13
 
 ]
 \openout2 = `anexo1.aux'.
@@ -788,26 +781,26 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ] (./plantilla_TFG_CienciasUCO_2022_utf8.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- (./agradecimientos.aux) (./resumen.aux) (./capitulo1.aux) (./resultados.aux) (./conclusion.aux) (./bibliografia.aux) (./anexo1.aux) (./anexo2.aux))
+ (./agradecimientos.aux) (./resumen.aux) (./capitulo1.aux) (./resultados.aux) (./conclusion.aux) (./anexo1.aux) (./anexo2.aux))
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `plantilla_TFG_CienciasUCO_2022_utf8.out' has not changed.
-(rerunfilecheck)             Checksum: 8258A49603B542F8F77E7F650E7FDE09;1160.
+(rerunfilecheck)             Checksum: 50B963007D690E4469EE6FF37B1778BF;1521.
  ) 
 Here is how much of TeX's memory you used:
- 22009 strings out of 479304
- 386052 string characters out of 5869778
+ 21999 strings out of 479304
+ 385871 string characters out of 5869778
  835064 words of memory out of 5000000
- 38604 multiletter control sequences out of 15000+600000
+ 38599 multiletter control sequences out of 15000+600000
  428822 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 118i,13n,119p,711b,1746s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1440.pfb>
-Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (16 pages, 553856 bytes).
+ 118i,13n,119p,711b,1744s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1440.pfb>
+Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (16 pages, 562263 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 91 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 394 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 

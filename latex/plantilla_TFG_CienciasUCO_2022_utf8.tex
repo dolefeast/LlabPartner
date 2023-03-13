@@ -14,7 +14,7 @@
 %%%% Nuevas definiciones %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Ejemplos de algunas definiciones 
-\def\dint{\displaystyle \int}
+\def \dint{\displaystyle \int}
 \def \gt {\gamma(t)}        %  gamma(t)
 \def \st {\tilde{\sigma}}   %  sigma tilde
 \def \sg {\sigma_{\gamma}}  %  sigma sub gamma
@@ -88,20 +88,20 @@
 \include{conclusion}       % Conclusiones (insertar en el fichero conclusion.tex proporcionado,
 %                                          las conclusiones en español e inglés)
  
-\include{bibliografia}     % Bibliografía (insertar en el fichero bibliografia.tex proporcionado, 
+%\include{bibliografia}     % Bibliografía (insertar en el fichero bibliografia.tex proporcionado, 
 %                                          la bibliografia con bibitem)
 
 %----------------------------------------------------------
 % Si se tiene una base de datos bibliográfica
 % estilo de bibliografía: plana, alfa...
+%\nocite{*}
 %\bibliographystyle{plain}
-
-% Bibliografía---------------------------
-% Añade la bibliografía al índice
-%\addcontentsline{toc}{chapter}{Bibliografía}
-
-%se incluye la bibliografía. Archivo de tipo .bib (bibtex)
-%\bibliography{bibliografia}
+%
+%% Bibliografía---------------------------
+%% Añade la bibliografía al índice
+%
+%%se incluye la bibliografía. Archivo de tipo .bib (bibtex)
+%\bibliography{bib/miaumiau}
 %----------------------------------------------------------
 
 % Apéndices (si los hubiera)
@@ -109,7 +109,6 @@
 \include{anexo1}    % Añadir los diferentes anexos, si los hubiera, con el mismo formato que tiene
 %                     el fichero anexo1.tex)
 \include{anexo2}
-% .......
 
 % Termina el documento
 \end{document}
