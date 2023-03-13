@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.12.21)  13 MAR 2023 12:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.12.21)  13 MAR 2023 18:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -731,14 +731,14 @@ Cap\'{\i }tulo 1.
 
 ]
 
-LaTeX Warning: Citation `.' on page 8 undefined on input line 30.
+LaTeX Warning: Citation `.' on page 8 undefined on input line 51.
 
 [8]) [9]
 \openout2 = `resultados.aux'.
 
  (./resultados.tex
 Cap\'{\i }tulo 2.
-<../figs/DA_DH_flat.pdf, id=195, 722.7pt x 505.89pt>
+<../figs/DA_DH_flat.pdf, id=197, 722.7pt x 505.89pt>
 File: ../figs/DA_DH_flat.pdf Graphic file (type pdf)
 <use ../figs/DA_DH_flat.pdf>
 Package pdftex.def Info: ../figs/DA_DH_flat.pdf  used on input line 7.
@@ -789,18 +789,18 @@ Package rerunfilecheck Info: File `plantilla_TFG_CienciasUCO_2022_utf8.out' has 
 (rerunfilecheck)             Checksum: 50B963007D690E4469EE6FF37B1778BF;1521.
  ) 
 Here is how much of TeX's memory you used:
- 21999 strings out of 479304
- 385871 string characters out of 5869778
+ 22003 strings out of 479304
+ 385927 string characters out of 5869778
  835064 words of memory out of 5000000
- 38599 multiletter control sequences out of 15000+600000
+ 38601 multiletter control sequences out of 15000+600000
  428822 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  118i,13n,119p,711b,1744s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1440.pfb>
-Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (16 pages, 562263 bytes).
+Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (16 pages, 567148 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 343 compressed objects within 4 object streams
+ 95 named destinations out of 1000 (max. 500000)
  204 words of extra memory for PDF output out of 10000 (max. 10000000)
 
