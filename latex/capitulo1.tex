@@ -6,7 +6,7 @@ El modelo actual del origen del universo más aceptado es el del \textit{Big Ban
 
 Durante sus primeros instantes de vida, el universo pasó por varias épocas. El universo comenzó siendo un plasma de fotones, leptones y cuarks, la época del quark. $10^{-6}$ segundos más tarde, al expandirse el universo y enfriarse, se permitió la combinación entre cuarks para formar protones hemos entrado en la época hadrónica. Todavía el universo es opaco para la radiación electromagnética, debido al corto camino medio que tenían los fotones antes de volver a interactuar con otra partícula a través del efecto Thomson. 
 
-Según el universo se sigue expandiendo y las densidades y temperaturas empiezan a bajar, se empieza a permitir la existencia de átomos, como el $He^{+}$ y el $H$. Este periodo termina a los 380.000 años de edad del universo, cuando por fin se terminan de formar los átomos neutros de Hidrógeno, conociendo esta época como la época de recombinación. El nombre recombinación puede confundir. No significa que haya habido un periodo de combinación anterior al que ocurre en 380.000, pero históricamente teorizó acerca de este momento antes de plantear la existencia del Big Bang. 
+Según el universo se sigue expandiendo y las densidades y temperaturas empiezan a bajar, se empieza a permitir la existencia de átomos, como el $He^{+}$ y el $H$. Este periodo termina a los 380.000 años de edad del universo, cuando por fin se terminan de formar los átomos neutros de Hidrógeno, conociendo esta época como la época de recombinación. El nombre recombinación puede confundir. No significa que haya habido un periodo de combinación anterior al que ocurre en 380.000, pero históricamente se teorizó acerca de este momento antes de plantear la existencia del Big Bang. 
 
 En cuanto termina la recombinación, los electrones excitados de los átomos debido a la gran densidad fotónica del plasma son permitidos bajar a su estado fundamental, expulsando así una gran cantidad de fotones. Se conoce esta gran emisión como el Fondo Cósmico de Microondas, y es la medida directa más antigua que podemos actualmente observar.
 
@@ -24,12 +24,53 @@ Introducimos así el concepto \textit{redshift} como variable temporal.
 \end{align}
 La luz necesita tiempo para llegar a su destino, y durante ese tiempo el universo se habrá expandido cierta cantidad. Esa cantidad desplaza la radiación hacia el rojo dándonos una idea de cuánto tiempo ha estado la onda viajando, es decir cuál es la edad del objeto que estamos observando.
 
+La expansión del universo viene parametrizada por un factor de escala $a(t)$, de tal forma que si en cierto momento medimos una distancia $a(t_0)\Delta x$, pasado un cierto tiempo $\Delta t$ la nueva medida de esa misma distancia resultará en $a(t_0+\Delta t) \Delta x$\footnote{Más precisamente, $a(t)$ aparece en la métrica de Friedman-Lemaître-Robertson-Walker (FLRW) 
+\begin{align}
+	ds^{2} = -dt ^{2} + a^{2}(t) \left( \frac{dr^{2}}{1-kr^2} + r^2d\theta^2 + r^2 \sin ^2 \theta d\phi^2\right) 
+\end{align}}
 
-La expansión del universo viene parametrizada por un factor de forma $a(t)$, de tal forma que si en cierto momento medimos una distancia $a(t_0)\Delta x$, pasado un cierto tiempo $\Delta t$ la nueva medida de esa misma distancia resultará en $a(t_0+\Delta t) \Delta x$. 
+Es decir, que si consiguiésemos averiguar la expresión de $a(t)$, podríamos determinar la historia del universo. Alexander Friedmann desarrolló en 1922 las ecuaciones de Friedmann en las que define formalmente el ya mencionado parámetro de Hubble $H(t)$
+\begin{align}
+	H^2(t) := \left( \frac{\dot a}{a} \right)^2 &=  \frac{8\pi G \rho}{3} +\frac{  \Lambda c^2}{3} - K \frac{c^2}{a^2}
+	\label{eq:1a-friedmann}\\
+	3 \frac{\ddot a}{a} &= \Lambda c^2 - 4\pi G \left( \rho + \frac{3p}{c^2} \right) 
+	\label{eq:2a-friedmann}
+\end{align}
+Siendo  $G$ la constante universal de gravitación, $\rho$ la densidad de materia del universo, $\Lambda$ la constante cosmológica, $K$ la curvatura Gaussiana del universo y  $p$ la presión del universo.
 
-Una parametrización del modelo cosmológico del Big Bang es $\Lambda$-Cold Dark Matter ($\Lambda$CDM de ahora en adelante). 
+Se puede expresar la ecuación \eqref{eq:1a-friedmann} de una forma más legible, definiendo los parámetros 
+\begin{align}
+\Omega_m = \frac{8\pi G \rho}{3H^2}, \Omega_\Lambda = \frac{\Lambda c^2}{3H^2}, \Omega_K = -K\frac{c^2}{H^2a^2} 
+\end{align}
+Conocidos como los parámetros de densidad, de vacío y de curvatura. Los dos primeros son los que contienen la información de la densidad de los fotones, neutrinos, bariones, materia oscura y energía oscura.
+
+Reescribimos así la ecuación \eqref{eq:1a-friedmann}
+\begin{align}
+	1 = \Omega_m + \Omega_\Lambda + \Omega_K
+\end{align}
+Que es la ecuación que cumplirá cualquier universo que estudiemos, entendiendo por universo o cosmología los diferentes valores que se le den a los parámetros $\Omega$
+
+Con estos conceptos podemos relacionar el \textit{redshift} con el factor $a(t)$ 
+\begin{align}
+	1+z = 1+  \frac{\lambda_o - \lambda_e}{\lambda_e} = \frac{a(t_o)}{a(t_e)}
+	\label{eq:relacion-z-a}
+\end{align}
+La ecuación \eqref{eq:relacion-z-a} nos permite relacionar el factor de escala actual con el que había en el universo en el momento de emisión de la radiación observada, en función del \textit{redshift}que observemos.
+
+Otra relación importante será también la que nos permite calcular el parámetro de Hubble en función de la cosmología que escojamos 
+\begin{align}
+	H(z) = H_0 \sqrt{\Omega_m(1+z)^3 + \Omega_K(1+z)^2 + \Omega_\Lambda} 
+\end{align}
+A través de la constante de Hubble calculamos también la distancia de Hubble 
+\begin{align}
+	D_H = \frac{c}{H(z)}
+	\label{eq:distancia-hubble}
+\end{align}
+Que actualmente toma un valor de $D_H = 3000h^{-1}\text{Mpc}$. La distancia de Hubble se define como la distancia a partir de la cual la velocidad de expansión del universo relativa al observador es mayor a la velocidad de la luz\footnote{Si sustituimos $v=c$ en \eqref{eq:ley-hubble}, sustituimos $v=c$ y despejamos la D correspondiente queda exactamente la expresión de $D_H$}
+
 
 Aquí explico los parámetros que afectan a la expansión del universo y por tanto al redshift y por tanto a las medidas que tomamos.
+
 
 %(condiciones iniciales, expansión del universo, composición del plasma primordial, parámetros cosmológicos LCDM)
 

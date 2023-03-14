@@ -8,13 +8,13 @@
 \contentsline {paragraph}{Keywords:}{6}{paragraph*.8}%
 \contentsline {chapter}{\numberline {1}Introducción}{7}{chapter.1}%
 \contentsline {section}{\numberline {1.1}El modelo Big Bang Caliente. }{7}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Oscilaciones Acústicas de Bariones.}{8}{section.1.2}%
-\contentsline {section}{\numberline {1.3}El Fondo Cósmico de Microondas.}{8}{section.1.3}%
-\contentsline {section}{\numberline {1.4}La estructura a gran escala del universo.}{8}{section.1.4}%
-\contentsline {section}{\numberline {1.5}La escala BAO como regla estándar.}{8}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Resultados}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Cálculo de observables}{9}{section.2.1}%
-\contentsline {chapter}{Conclusiones}{11}{chapter*.9}%
-\contentsline {chapter}{Conclusions}{12}{chapter*.10}%
-\contentsline {chapter}{Anexo: Ejemplo para introducir código Matlab}{13}{appendix*.11}%
-\contentsline {chapter}{Anexo: Ejemplo para introducir código ISE}{14}{appendix*.12}%
+\contentsline {section}{\numberline {1.2}Oscilaciones Acústicas de Bariones.}{9}{section.1.2}%
+\contentsline {section}{\numberline {1.3}El Fondo Cósmico de Microondas.}{9}{section.1.3}%
+\contentsline {section}{\numberline {1.4}La estructura a gran escala del universo.}{9}{section.1.4}%
+\contentsline {section}{\numberline {1.5}La escala BAO como regla estándar.}{9}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Resultados}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cálculo de observables}{10}{section.2.1}%
+\contentsline {chapter}{Conclusiones}{12}{chapter*.9}%
+\contentsline {chapter}{Conclusions}{13}{chapter*.10}%
+\contentsline {chapter}{Anexo: Ejemplo para introducir código Matlab}{14}{appendix*.11}%
+\contentsline {chapter}{Anexo: Ejemplo para introducir código ISE}{15}{appendix*.12}%
