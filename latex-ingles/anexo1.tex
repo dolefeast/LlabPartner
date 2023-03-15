@@ -1,0 +1,28 @@
+\chapter*{Anexo: Ejemplo para introducir código Matlab}
+\addcontentsline{toc}{chapter}{Anexo: Ejemplo para introducir código Matlab}
+
+\renewcommand{\baselinestretch}{1}
+\begin{lstlisting}[language=Matlab]
+%% 3-D Plots
+% Three-dimensional plots typically display a surface 
+% defined by a function in two variables, z = f(x,y) .
+%%
+% To evaluate z, first create a set of (x,y) points 
+% over the domain of the function using meshgrid.
+	[X,Y] = meshgrid(-2:.2:2);                                
+	Z = X .* exp(-X.^2 - Y.^2);
+%%
+% Then, create a surface plot.
+	surf(X,Y,Z)
+%%
+% Both the surf function and its companion mesh display 
+% surfaces in three dimensions. surf displays both the 
+% connecting lines and the faces of the surface in color. 
+% Mesh produces wireframe surfaces that color only the 
+%lines connecting the defining points.
+
+\end{lstlisting}
+\renewcommand{\baselinestretch}{1.5}
+
+
+

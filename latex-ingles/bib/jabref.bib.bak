@@ -1,0 +1,67 @@
+% Encoding: UTF-8
+
+@Article{eisenstein1998can,
+  author    = {Eisenstein, Daniel J and Hu, Wayne and Silk, Joseph and Szalay, Alexander S},
+  title     = {Can Baryonic Features Produce the Observed 100 h- 1 Mpc Clustering?},
+  journal   = {The Astrophysical Journal},
+  year      = {1998},
+  volume    = {494},
+  number    = {1},
+  pages     = {L1},
+  publisher = {IOP Publishing},
+}
+
+@Article{Eisenstein2006,
+  author       = {Daniel J. Eisenstein and Hee-jong Seo and Edwin Sirko and David Spergel},
+  title        = {Improving Cosmological Distance Measurements by Reconstruction of the Baryon Acoustic Peak},
+  abstract     = {The baryon acoustic oscillations are a promising route to the precision measure of the cosmological distance scale and hence the measurement of the time evolution of dark energy. We show that the non-linear degradation of the acoustic signature in the correlations of low-redshift galaxies is a correctable process. By suitable reconstruction of the linear density field, one can sharpen the acoustic peak in the correlation function or, equivalently, restore the higher harmonics of the oscillations in the power spectrum. With this, one can achieve better measurements of the acoustic scale for a given survey volume. Reconstruction is particularly effective at low redshift, where the non-linearities are worse but where the dark energy density is highest. At z=0.3, we find that one can reduce the sample variance error bar on the acoustic scale by at least a factor of 2 and in principle by nearly a factor of 4. We discuss the significant implications our results have for the design of galaxy surveys aimed at measuring the distance scale through the acoustic peak.},
+  date         = {2006-04-17},
+  doi          = {10.1086/518712},
+  eprint       = {astro-ph/0604362v1},
+  eprintclass  = {astro-ph},
+  eprinttype   = {arXiv},
+  file         = {online:http\://arxiv.org/pdf/astro-ph/0604362v1:PDF},
+  journaltitle = {Astrophys.J.664:675-679,2007},
+  keywords     = {astro-ph},
+}
+
+@Book{Baumann_2022,
+  title     = {Cosmology},
+  publisher = {Cambridge University Press},
+  year      = {2022},
+  author    = {Daniel Baumann},
+  month     = {jun},
+  doi       = {10.1017/9781108937092},
+}
+
+@Article{Eisenstein1998,
+  author        = {Daniel J. Eisenstein and Wayne Hu and Max Tegmark},
+  title         = {Cosmic Complementarity: H_0 and Omega_m from Combining CMB Experiments and Redshift Surveys},
+  __markedentry = {[santi:]},
+  abstract      = {We show that upcoming CMB satellite experiments and large redshift surveys can be used together to yield 5% determinations of H_0 and Omega_m, an order of magnitude improvement over CMB data alone. CMB anisotropies provide the sound horizon at recombination as a standard ruler. For reasonable baryon fractions, this scale is imprinted on the galaxy power spectrum as a series of spectral features. Measuring these features in redshift space determines the Hubble constant, which in turn yields Omega_m once combined with CMB data. Since the oscillations in both power spectra are frozen in at recombination, this test is insensitive to low-redshift cosmology.},
+  date          = {1998-05-19},
+  doi           = {10.1086/311582},
+  eprint        = {astro-ph/9805239v1},
+  eprintclass   = {astro-ph},
+  eprinttype    = {arXiv},
+  file          = {online:http\://arxiv.org/pdf/astro-ph/9805239v1:PDF},
+  journaltitle  = {Astrophys.J.504:L57-L61,1998},
+  keywords      = {astro-ph},
+}
+
+@Article{Eisenstein2005,
+  author        = {D. J. Eisenstein and I. Zehavi and D. W. Hogg and R. Scoccimarro and M. R. Blanton and R. C. Nichol and R. Scranton and H. Seo and M. Tegmark and Z. Zheng and S. Anderson and J. Annis and N. Bahcall and J. Brinkmann and S. Burles and F. J. Castander and A. Connolly and I. Csabai and M. Doi and M. Fukugita and J. A. Frieman and K. Glazebrook and J. E. Gunn and J. S. Hendry and G. Hennessy and Z. Ivezic and S. Kent and G. R. Knapp and H. Lin and Y. Loh and R. H. Lupton and B. Margon and T. McKay and A. Meiksin and J. A. Munn and A. Pope and M. Richmond and D. Schlegel and D. Schneider and K. Shimasaku and C. Stoughton and M. Strauss and M. SubbaRao and A. S. Szalay and I. Szapudi and D. Tucker and B. Yanny and D. York},
+  title         = {Detection of the Baryon Acoustic Peak in the Large-Scale Correlation Function of SDSS Luminous Red Galaxies},
+  __markedentry = {[santi:6]},
+  abstract      = {We present the large-scale correlation function measured from a spectroscopic sample of 46,748 luminous red galaxies from the Sloan Digital Sky Survey. The survey region covers 0.72 h^{-3} Gpc^3 over 3816 square degrees and 0.16<z<0.47, making it the best sample yet for the study of large-scale structure. We find a well-detected peak in the correlation function at 100h^{-1} Mpc separation that is an excellent match to the predicted shape and location of the imprint of the recombination-epoch acoustic oscillations on the low-redshift clustering of matter. This detection demonstrates the linear growth of structure by gravitational instability between z=1000 and the present and confirms a firm prediction of the standard cosmological theory. The acoustic peak provides a standard ruler by which we can measure the ratio of the distances to z=0.35 and z=1089 to 4% fractional accuracy and the absolute distance to z=0.35 to 5% accuracy. From the overall shape of the correlation function, we measure the matter density Omega_mh^2 to 8% and find agreement with the value from cosmic microwave background (CMB) anisotropies. Independent of the constraints provided by the CMB acoustic scale, we find Omega_m = 0.273 +- 0.025 + 0.123 (1+w_0) + 0.137 Omega_K. Including the CMB acoustic scale, we find that the spatial curvature is Omega_K=-0.010+-0.009 if the dark energy is a cosmological constant. More generally, our results provide a measurement of cosmological distance, and hence an argument for dark energy, based on a geometric method with the same simple physics as the microwave background anisotropies. The standard cosmological model convincingly passes these new and robust tests of its fundamental properties.},
+  date          = {2005-01-10},
+  doi           = {10.1086/466512},
+  eprint        = {astro-ph/0501171v1},
+  eprintclass   = {astro-ph},
+  eprinttype    = {arXiv},
+  file          = {online:http\://arxiv.org/pdf/astro-ph/0501171v1:PDF},
+  journaltitle  = {Astrophys.J.633:560-574,2005},
+  keywords      = {astro-ph},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
